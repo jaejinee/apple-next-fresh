@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #303030;
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
+  margin: 0;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
@@ -24,4 +25,28 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.title {
+  @apply text-center mt-[50px];
+}
+
+.food {
+  @apply m-5 mx-auto w-[200px] bg-white text-black p-5 rounded-md;
+}
+
+.navbar {
+  @apply bg-white text-[var(--background)] p-5;
+}
+
+.navbar a {
+  @apply mr-[10px] no-underline;
+}
+
+.food-img {
+  @apply w-full h-auto;
+}
+
+.cart-item {
+  @apply flex p-[10px] justify-around border-b border-gray-500 leading-none;
 }
